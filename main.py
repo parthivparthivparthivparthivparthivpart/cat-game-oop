@@ -8,8 +8,17 @@ my_cat = Cat(name, colour)
 while True:
     action = input("""
 What would you like to do:
-1. Train
+1. Train intelligence
 2. Feed
 3. Play
-4. Sleep
+4. Sleep and defend
+5. Slay enemies
 """)
+    
+    if action == "1":
+        name.train()
+    if action == "2":
+        name.feed()
+    if action == "3":
+        name.play()
+    
