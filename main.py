@@ -16,9 +16,9 @@ What would you like to do:
 """)
     
     if action == "1":
-        name.train()
+        my_cat.train()
     if action == "2":
-        name.feed()
+        my_cat.feed()
     if action == "3":
-        name.play()
+        my_cat.play()
     
