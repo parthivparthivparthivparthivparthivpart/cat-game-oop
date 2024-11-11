@@ -21,9 +21,9 @@ class Cat:
         self.age += 0.1
         chance = random.randint(1, 3)
         if chance == 2:
-            self.sanity += 10
+            self.sanity += 25
         if chance == 1:
-            self.sanity -= 10
+            self.sanity -= 25
         if chance == 3:
             self.sanity += 0
     def feed(self):
@@ -33,34 +33,44 @@ class Cat:
         self.age += 0.1
         chance = random.randint(1, 3)
         if chance == 2:
-            self.sanity += 10
+            self.sanity += 25
         if chance == 1:
-            self.sanity -= 10
+            self.sanity -= 25
         if chance == 3:
             self.sanity += 0
     def play(self):
         print(f"{self.name} played with the toy you handed to them")
+        print("""
+ _._     _,-'""`-._
+(,-.`._,'(       |\`-/|
+    `-.-' \ )-`( , o o)
+          `-    \`_`"'-""")
         self.energy -= 5
         self.weight -= 0.5
         self.age += 0.1
         self.intelligence -= 2
         chance = random.randint(1, 3)
         if chance == 2:
-            self.sanity += 10
+            self.sanity += 25
         if chance == 1:
-            self.sanity -= 10
+            self.sanity -= 25
         if chance == 3:
             self.sanity += 0
     def sleep(self):
         print(f"You tucked {self.name} in its bed and destroyed each enemy that dare attack")
+        print("""
+      |\      _,,,---,,_
+ZZZzz /,`.-'`'    -.  ;-;;,_
+     |,4-  ) )-,_. ,\ (  `'-'
+    '---''(_/--'  `-'\_)""")
         self.energy += 15
         self.age += 0.1
         self.combat += 0.5
         chance = random.randint(1, 3)
         if chance == 2:
-            self.sanity += 10
+            self.sanity += 25
         if chance == 1:
-            self.sanity -= 10
+            self.sanity -= 25
         if chance == 3:
             self.sanity += 0
     def fight(self):
@@ -71,9 +81,9 @@ class Cat:
         self.age += 0.1
         chance = random.randint(1, 3)
         if chance == 2:
-            self.sanity += 10
+            self.sanity += 25
         if chance == 1:
-            self.sanity -= 10
+            self.sanity -= 25
         if chance == 3:
             self.sanity += 0
 
@@ -91,69 +101,91 @@ class Eldritch_God:
     def train(self):
         print(f"{self.name} is doing push-ups...")
         self.energy -= 5
+        if self.energy < 0:
+            self.energy += 0
+            print("Your cat could NOT TRAIN do not torture it please")
         self.intelligence += 2
         self.age += 0.1
         chance = random.randint(1, 3)
         if chance == 2:
-            self.sanity += 10
+            self.sanity += 25
         if chance == 1:
-            self.sanity -= 10
+            self.sanity -= 25
         if chance == 3:
             self.sanity += 0
     def feed(self):
         print(f"{self.name} ate some freshly cooked ravioli...")
         self.energy += 10
         self.weight += 1
+        if self.weight > 50:
+            print("Your cat is TOO FAT")
+            self.weight += 1
+            self.energy -= 5
         self.age += 0.1
         chance = random.randint(1, 3)
         if chance == 2:
-            self.sanity += 10
+            self.sanity += 25
         if chance == 1:
-            self.sanity -= 10
+            self.sanity -= 25
         if chance == 3:
             self.sanity += 0
     def play(self):
         print(f"{self.name} played with the toy you handed to them")
+        print("""
+ _._     _,-'""`-._
+(,-.`._,'(       |\`-/|
+    `-.-' \ )-`( , o o)
+          `-    \`_`"'-""")
         self.energy -= 5
+        if self.energy < 0:
+            self.energy += 0
+            print("Your cat could NOT play do not torture it please")
         self.weight -= 0.5
         self.age += 0.1
         self.intelligence -= 2
         chance = random.randint(1, 3)
         if chance == 2:
-            self.sanity += 10
+            self.sanity += 25
         if chance == 1:
-            self.sanity -= 10
+            self.sanity -= 25
         if chance == 3:
             self.sanity += 0
     def sleep(self):
         print(f"You tucked {self.name} in its bed and destroyed each enemy that dare attack")
+        print("""
+      |\      _,,,---,,_
+ZZZzz /,`.-'`'    -.  ;-;;,_
+     |,4-  ) )-,_. ,\ (  `'-'
+    '---''(_/--'  `-'\_)""")
         self.energy += 15
         self.age += 0.1
         self.combat += 0.5
         chance = random.randint(1, 3)
         if chance == 2:
-            self.sanity += 10
+            self.sanity += 25
         if chance == 1:
-            self.sanity -= 10
+            self.sanity -= 25
         if chance == 3:
             self.sanity += 0
     def fight(self):
         print(f"you and {self.name} both fought valiantly against shadow warriors of Sir Catkiller IV, and you stole some money")
         self.energy -= 10
+        if self.energy < 0:
+            self.energy += 0
+            print("Your cat could NOT FIGHT do not torture it please")
         self.combat += 1
         self.money += 5
         self.age += 0.1
         chance = random.randint(1, 3)
         if chance == 2:
-            self.sanity += 10
+            self.sanity += 25
         if chance == 1:
-            self.sanity -= 10
+            self.sanity -= 25
         if chance == 3:
             self.sanity += 0
-    
+
     
 
 # we will now make two cats
 # These are called instances
 # each one is an instance of cats
-

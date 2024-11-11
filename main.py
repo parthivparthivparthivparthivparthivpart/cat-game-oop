@@ -15,6 +15,7 @@ Money: {my_cat.money}
 def miracle():
      a = random.randint(1, 10)
      if a == 7:
+          print("Your eldritch God peformed a miracle!!!!!")
           my_cat.weight += 1
           my_cat.intelligence += 1
           my_cat.energy += 15
@@ -35,6 +36,7 @@ What would you like to do:
 3. Play
 4. Sleep and defend
 5. Slay enemies
+6. shop
 """)
         if action == "1":
             my_cat.train()
@@ -58,6 +60,23 @@ What would you like to do:
             miracle()
         if my_cat.sanity > 0:
             print("Your cat, also known as Azathoth, has now fully awoken and had destroyed the known universe")
+        if action == '6':
+            buy = input("""
+What do you want to buy?:
+1. The Catkiller killer (250)
+2. Eldritchify (250)
+3. End the universe (500))
+""")
+            if buy == '1':
+                if my_cat.money >= 250:
+                    print("You killed the catkillers!!!!")
+                    break
+                else: print("Not enough money")
+            if buy == '3':
+                if my_cat.money >= 500:
+                    print("You destroyed the entire universe for what? your cat also died")
+                    break
+                else: print("Not enough money")
 if name.isalpha():
     my_cat = Cat(name, colour)
     while True:
@@ -68,6 +87,7 @@ What would you like to do:
 3. Play
 4. Sleep and defend
 5. Slay enemies
+6. shop
 """)
 
         if action == "1":
@@ -88,4 +108,30 @@ What would you like to do:
         if my_cat.sanity < 0:
              print("Your cat becomes insane and suddenly enlarges, and eats you")
              break
+        if action == '6':
+            buy = input("""
+What do you want to buy?:
+1. The Catkiller killer (250)
+2. Eldritchify (250)
+3. End the universe (500))
+""")
+            if buy == '1':
+                if my_cat.money >= 250:
+                    print("You killed the catkillers!!!!")
+                    break
+                else: print("Not enough money")
+            if buy == '2':
+                if my_cat.money >= 250:
+                    print("You transformed your cat into a GOD")
+                    my_cat = Eldritch_God
+                else: print("Not enough money")
+            if buy == '3':
+                if my_cat.money >= 500:
+                    print("You destroyed the entire universe for what? your cat also died")
+                    break
+                else: print("Not enough money")
+        if my_cat.age > 100:
+            print("Your cat grew old and you both died happily")
+            break
+
 
